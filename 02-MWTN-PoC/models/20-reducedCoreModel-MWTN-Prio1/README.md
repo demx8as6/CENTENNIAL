@@ -72,26 +72,30 @@ In addition the all attributes are listed, even when they are not susported.
 - uuid (containerType)
 - containerName (containerType)
 - numberOfTimeSlotsRequired (containerType)
-- //  tdmTimeSlotsIsRequired (containerType) ---
+- //  tdmTimeSlotsIsRequired (containerType) 
 - bundlingIsAvail (containerType)
+
 timeSlotIDType
 - structureID (timeSlotIDType)
 - timeSlotID (timeSlotIDType)
+
 timeSlotStatusType
 - uuid (timeSlotStatusType)
-- //  timeSlotIsReservedForTdm (timeSlotStatusType) ---
-- //  priorityClass (timeSlotStatusType) ---
-- //  dropOrderRank (timeSlotStatusType) ---
+- //  timeSlotIsReservedForTdm (timeSlotStatusType) 
+- //  priorityClass (timeSlotStatusType) 
+- //  dropOrderRank (timeSlotStatusType) 
 - operationalStatus (timeSlotStatusType)
+
 MW_AirInterface_Pac
 - layerProtocol (MW_AirInterface_Pac)
-- //  airInterfacePort (MW_AirInterface_Pac) ---
+- //  airInterfacePort (MW_AirInterface_Pac) 
 - airInterfaceCapabilityList (MW_AirInterface_Pac)
 - airInterfaceConfiguration (MW_AirInterface_Pac)
 - airInterfaceStatus (MW_AirInterface_Pac)
-- //  airInterfaceCurrentProblemList (MW_AirInterface_Pac) ---
-- //  airInterfaceCurrentPerformance (MW_AirInterface_Pac) ---
-- //  airInterfaceHistoricalPerformanceList (MW_AirInterface_Pac) ---
+- //  airInterfaceCurrentProblemList (MW_AirInterface_Pac) 
+- //  airInterfaceCurrentPerformance (MW_AirInterface_Pac) 
+- //  airInterfaceHistoricalPerformanceList (MW_AirInterface_Pac) 
+
 AirInterfaceCapability
 - airInterfaceID (AirInterfaceCapability)
 - typeOfEquipment (AirInterfaceCapability)
@@ -100,30 +104,32 @@ AirInterfaceCapability
 - txFrequencyMax (AirInterfaceCapability)
 - rxFrequencyMin (AirInterfaceCapability)
 - rxFrequencyMax (AirInterfaceCapability)
-- //  duplexDistanceIsVariable (AirInterfaceCapability) ---
-- //  duplexDistance (AirInterfaceCapability) ---
+- //  duplexDistanceIsVariable (AirInterfaceCapability) 
+- //  duplexDistance (AirInterfaceCapability) 
 - adaptiveModulationIsAvail (AirInterfaceCapability)
-- //  mimoIsAvail (AirInterfaceCapability) ---
-- //  mimoChannels (AirInterfaceCapability) ---
-- //  afrIsAvail (AirInterfaceCapability) ---
-- //  atpcIsAvail (AirInterfaceCapability) ---
-- //  atpcRange (AirInterfaceCapability) ---
-- //  autoFreqSelectIsAvail (AirInterfaceCapability) ---
-- //  loopBackIsAvail (AirInterfaceCapability) ---
-- //  maintenanceTimerRange (AirInterfaceCapability) ---
-- //  supportedAlarms (AirInterfaceCapability) ---
+- //  mimoIsAvail (AirInterfaceCapability) 
+- //  mimoChannels (AirInterfaceCapability) 
+- //  afrIsAvail (AirInterfaceCapability) 
+- //  atpcIsAvail (AirInterfaceCapability) 
+- //  atpcRange (AirInterfaceCapability) 
+- //  autoFreqSelectIsAvail (AirInterfaceCapability) 
+- //  loopBackIsAvail (AirInterfaceCapability) 
+- //  maintenanceTimerRange (AirInterfaceCapability) 
+- //  supportedAlarms (AirInterfaceCapability) 
 - scriptList (AirInterfaceCapability)
+
 Script
 - scriptID (Script)
 - channelBandwidth (Script)
 - modulationScheme (Script)
-- //  informationRate (Script) ---
+- //  informationRate (Script) 
 - txPowerMin (Script)
 - txPowerMax (Script)
-- //  rxThreshold (Script) ---
-- //  amUpshiftLevel (Script) ---
-- //  amDownshiftLevel (Script) ---
+- //  rxThreshold (Script) 
+- //  amUpshiftLevel (Script) 
+- //  amDownshiftLevel (Script) 
 - xpicIsAvail (Script)
+
 AirInterfaceConfiguration
 - airInterfaceName (AirInterfaceConfiguration)
 - radioSignalId (AirInterfaceConfiguration)
@@ -131,7 +137,7 @@ AirInterfaceConfiguration
 - rxFrequency (AirInterfaceConfiguration)
 - txChannelBandwidth (AirInterfaceConfiguration)
 - rxChannelBandwidth (AirInterfaceConfiguration)
-- //  polarization (AirInterfaceConfiguration) ---
+- //  polarization (AirInterfaceConfiguration) 
 - powerIsOn (AirInterfaceConfiguration)
 - transmitterIsOn (AirInterfaceConfiguration)
 - txPower (AirInterfaceConfiguration)
@@ -139,110 +145,121 @@ AirInterfaceConfiguration
 - modulationMin (AirInterfaceConfiguration)
 - modulationMax (AirInterfaceConfiguration)
 - xpicIsOn (AirInterfaceConfiguration)
-- //  mimoIsOn (AirInterfaceConfiguration) ---
-- //  afrIsOn (AirInterfaceConfiguration) ---
-- //  coChannelGroup (AirInterfaceConfiguration) ---
-- //  atpcIsOn (AirInterfaceConfiguration) ---
-- //  atpcThreshUpper (AirInterfaceConfiguration) ---
-- //  atpcThreshLower (AirInterfaceConfiguration) ---
-- //  autoFreqSelectIsOn (AirInterfaceConfiguration) ---
-- //  autoFreqSelectRange (AirInterfaceConfiguration) ---
-- //  modulationIsOn (AirInterfaceConfiguration) ---
-- //  loopBackIsOn (AirInterfaceConfiguration) ---
-- //  maintenanceTimer (AirInterfaceConfiguration) ---
-- //  problemSeverityList (AirInterfaceConfiguration) ---
+- //  mimoIsOn (AirInterfaceConfiguration) 
+- //  afrIsOn (AirInterfaceConfiguration) 
+- //  coChannelGroup (AirInterfaceConfiguration) 
+- //  atpcIsOn (AirInterfaceConfiguration) 
+- //  atpcThreshUpper (AirInterfaceConfiguration) 
+- //  atpcThreshLower (AirInterfaceConfiguration) 
+- //  autoFreqSelectIsOn (AirInterfaceConfiguration) 
+- //  autoFreqSelectRange (AirInterfaceConfiguration) 
+- //  modulationIsOn (AirInterfaceConfiguration) 
+- //  loopBackIsOn (AirInterfaceConfiguration) 
+- //  maintenanceTimer (AirInterfaceConfiguration) 
+- //  problemSeverityList (AirInterfaceConfiguration) 
+
 AirInterfaceStatus
 - txFrequencyCur (AirInterfaceStatus)
 - rxFrequencyCur (AirInterfaceStatus)
 - txLevelCur (AirInterfaceStatus)
 - rxLevelCur (AirInterfaceStatus)
-- //  modulationCur (AirInterfaceStatus) ---
-- //  informationRateCur (AirInterfaceStatus) ---
+- //  modulationCur (AirInterfaceStatus) 
+- //  informationRateCur (AirInterfaceStatus) 
 - snrCur (AirInterfaceStatus)
-- //  xpdCur (AirInterfaceStatus) ---
-- //  rxTempCur (AirInterfaceStatus) ---
-- //  lastStatusChange (AirInterfaceStatus) ---
-- //  radioPowerIsUp (AirInterfaceStatus) ---
+- //  xpdCur (AirInterfaceStatus) 
+- //  rxTempCur (AirInterfaceStatus) 
+- //  lastStatusChange (AirInterfaceStatus) 
+- //  radioPowerIsUp (AirInterfaceStatus) 
 - linkIsUp (AirInterfaceStatus)
 - xpicIsUp (AirInterfaceStatus)
-- //  mimoIsUp (AirInterfaceStatus) ---
-- //  afrIsUp (AirInterfaceStatus) ---
-- //  atpcIsUp (AirInterfaceStatus) ---
-- //  autoFreqSelectIsUp (AirInterfaceStatus) ---
-- //  loopBackIsUp (AirInterfaceStatus) ---
+- //  mimoIsUp (AirInterfaceStatus) 
+- //  afrIsUp (AirInterfaceStatus) 
+- //  atpcIsUp (AirInterfaceStatus) 
+- //  autoFreqSelectIsUp (AirInterfaceStatus) 
+- //  loopBackIsUp (AirInterfaceStatus) 
+
 MW_Structure_Pac
 - layerProtocol (MW_Structure_Pac)
 - structureCapability (MW_Structure_Pac)
 - structureConfiguration (MW_Structure_Pac)
 - structureStatus (MW_Structure_Pac)
-- //  structureCurrentProblemList (MW_Structure_Pac) ---
-- //  structureCurrentPerformance (MW_Structure_Pac) ---
-- //  structureHistoricalPerformanceList (MW_Structure_Pac) ---
-- //  airInterfaceProtectionLTP (MW_Structure_Pac) ---
-- //  mw_airInterface_pac (MW_Structure_Pac) ---
+- //  structureCurrentProblemList (MW_Structure_Pac) 
+- //  structureCurrentPerformance (MW_Structure_Pac) 
+- //  structureHistoricalPerformanceList (MW_Structure_Pac) 
+- //  airInterfaceProtectionLTP (MW_Structure_Pac) 
+- //  mw_airInterface_pac (MW_Structure_Pac) 
+
 StructureCapability
 - structureID (StructureCapability)
 - totalNumberOfTimeSlots (StructureCapability)
-- //  tdmTimeSlotsIsSupported (StructureCapability) ---
-- //  supportedAlarms (StructureCapability) ---
+- //  tdmTimeSlotsIsSupported (StructureCapability) 
+- //  supportedAlarms (StructureCapability) 
+
 StructureConfiguration
-- //  tdmReservedNumberOfTimeSlots (StructureConfiguration) ---
+- //  tdmReservedNumberOfTimeSlots (StructureConfiguration) 
 - serverID (StructureConfiguration)
-- //  problemSeverityList (StructureConfiguration) ---
+- //  problemSeverityList (StructureConfiguration) 
+
 StructureStatus
 - timeSlotStatusList (StructureStatus)
-- //  lastStatusChange (StructureStatus) ---
+- //  lastStatusChange (StructureStatus) 
+
 MW_Container_Pac
 - layerProtocol (MW_Container_Pac)
 - containerCapability (MW_Container_Pac)
 - containerConfiguration (MW_Container_Pac)
 - containerStatus (MW_Container_Pac)
-- //  containerCurrentProblemList (MW_Container_Pac) ---
-- //  containerCurrentPerformance (MW_Container_Pac) ---
-- //  containerHistoricalPerformanceList (MW_Container_Pac) ---
-- //  mw_structure_pac (MW_Container_Pac) ---
-- //  port (MW_Container_Pac) ---
-- //  ethernetSwitch (MW_Container_Pac) ---
+- //  containerCurrentProblemList (MW_Container_Pac) 
+- //  containerCurrentPerformance (MW_Container_Pac) 
+- //  containerHistoricalPerformanceList (MW_Container_Pac) 
+- //  mw_structure_pac (MW_Container_Pac) 
+- //  port (MW_Container_Pac) 
+- //  ethernetSwitch (MW_Container_Pac) 
+
 ContainerCapability
 - containerID (ContainerCapability)
 - availableKindsOfContainerList (ContainerCapability)
-- //  priorityClassesIsAvail (ContainerCapability) ---
-- //  encryptionIsAvail (ContainerCapability) ---
-- //  packetCompressionIsAvail (ContainerCapability) ---
-- //  layer2CompressionIsAvail (ContainerCapability) ---
-- //  vlanCompressionIsAvail (ContainerCapability) ---
-- //  qInQCompressionIsAvail (ContainerCapability) ---
-- //  mplsCompressionIsAvail (ContainerCapability) ---
-- //  l2vpnCompressionIsAvail (ContainerCapability) ---
-- //  ipv4CompressionIsAvail (ContainerCapability) ---
-- //  ipv6CompressionIsAvail (ContainerCapability) ---
-- //  l3vpnCompressionIsAvail (ContainerCapability) ---
-- //  layer4CompressionIsAvail (ContainerCapability) ---
-- //  supportedAlarms (ContainerCapability) ---
+- //  priorityClassesIsAvail (ContainerCapability) 
+- //  encryptionIsAvail (ContainerCapability) 
+- //  packetCompressionIsAvail (ContainerCapability) 
+- //  layer2CompressionIsAvail (ContainerCapability) 
+- //  vlanCompressionIsAvail (ContainerCapability) 
+- //  qInQCompressionIsAvail (ContainerCapability) 
+- //  mplsCompressionIsAvail (ContainerCapability) 
+- //  l2vpnCompressionIsAvail (ContainerCapability) 
+- //  ipv4CompressionIsAvail (ContainerCapability) 
+- //  ipv6CompressionIsAvail (ContainerCapability) 
+- //  l3vpnCompressionIsAvail (ContainerCapability) 
+- //  layer4CompressionIsAvail (ContainerCapability) 
+- //  supportedAlarms (ContainerCapability) 
+
 ContainerConfiguration
 - container (ContainerConfiguration)
-- //  priorityClass (ContainerConfiguration) ---
+- //  priorityClass (ContainerConfiguration) 
 - timeSlotIDList (ContainerConfiguration)
-- //  encryptionIsOn (ContainerConfiguration) ---
-- //  packetCompressionIsOn (ContainerConfiguration) ---
-- //  layer2CompressionIsOn (ContainerConfiguration) ---
-- //  vlanCompressionIsOn (ContainerConfiguration) ---
-- //  qInQCompressionIsOn (ContainerConfiguration) ---
-- //  mplsCompressionIsOn (ContainerConfiguration) ---
-- //  l2vpnCompressionIsOn (ContainerConfiguration) ---
-- //  ipv4CompressionIsOn (ContainerConfiguration) ---
-- //  ipv6CompressionIsOn (ContainerConfiguration) ---
-- //  l3vpnCompressionIsOn (ContainerConfiguration) ---
-- //  layer4CompressionIsOn (ContainerConfiguration) ---
-- //  problemSeverityList (ContainerConfiguration) ---
+- //  encryptionIsOn (ContainerConfiguration) 
+- //  packetCompressionIsOn (ContainerConfiguration) 
+- //  layer2CompressionIsOn (ContainerConfiguration) 
+- //  vlanCompressionIsOn (ContainerConfiguration) 
+- //  qInQCompressionIsOn (ContainerConfiguration) 
+- //  mplsCompressionIsOn (ContainerConfiguration) 
+- //  l2vpnCompressionIsOn (ContainerConfiguration) 
+- //  ipv4CompressionIsOn (ContainerConfiguration) 
+- //  ipv6CompressionIsOn (ContainerConfiguration) 
+- //  l3vpnCompressionIsOn (ContainerConfiguration) 
+- //  layer4CompressionIsOn (ContainerConfiguration) 
+- //  problemSeverityList (ContainerConfiguration) 
+
 ObjectCreationNotification
 - counter (ObjectCreationNotification)
 - timeStamp (ObjectCreationNotification)
 - objectId (ObjectCreationNotification)
+
 ObjectDeletionNotification
 - counter (ObjectDeletionNotification)
 - timeStamp (ObjectDeletionNotification)
 - objectId (ObjectDeletionNotification)
+
 AttributeValueChangedNotification
 - counter (AttributeValueChangedNotification)
 - timeStamp (AttributeValueChangedNotification)
