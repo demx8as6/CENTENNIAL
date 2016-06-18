@@ -1087,15 +1087,15 @@ function obj2yang(ele){
                 }
                 var vr,inv,avcNot,dNot,cNot;
                 for(var k=0;k<openModelAtt.length;k++){
-                    if(openModelAtt[k].id==ele[i].attribute[j].id){
+                    if(openModelAtt[k].id === ele[i].attribute[j].id){
                         vr=openModelAtt[k].valueRange;
                         if(openModelAtt[k].condition){
                             feat.push(createFeature(openModelAtt[k]));
                             ele[i].attribute[j].support=feat[feat.length-1].name;
                         }
                         if(openModelAtt[k].unit){
-                          console.info('sko5', openModelAtt[k].unit);
-                          //ele[i].attribute[j].status=openModelAtt[k].status;
+                          console.info('unit from profile', openModelAtt[k].unit, ele[i].attribute[j].name, JSON.stringify(openModelAtt[k]));
+                          ele[i].attribute[j].units=openModelAtt[k].unit;
                         }
                         if(openModelAtt[k].status){
                           ele[i].attribute[j].status=openModelAtt[k].status;
