@@ -143,9 +143,9 @@ module.exports = function(grunt) {
     });
 
     grunt.registerTask('build-test-env', [
-        'shell:controller-odl-build',
+    //    'shell:controller-odl-build',
         'shell:controller-wipro-build',
-        'shell:mediator-hcl-build',
+   //     'shell:mediator-hcl-build',
         'shell:mediator-ceragon-build'
     ]);
     grunt.registerTask('test-env', [
