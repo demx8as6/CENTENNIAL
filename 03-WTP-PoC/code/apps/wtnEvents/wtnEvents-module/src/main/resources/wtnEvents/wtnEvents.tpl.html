@@ -1,7 +1,44 @@
-<!-- This is the landing page of you application, Update the content as per your requirements -->
+<script src="src/app/odlChat/xml2json.js"></script>
+<div class="container" style="width: 800px">
 
-<h4>Your {{data}} application is loaded</h4>
-<hr />
-<p>
- <span>Build: @buildtime@</span>
-</p>
+ <div class="row">
+  <div class="col-md-9">
+   <h4 style="color: aqua;">Microwave Transport Notifications</h4>
+  </div>
+ </div>
+
+ <table class="footable table">
+  <thead>
+   <tr>
+    <th data-sort-ignore="false">SI No</th>
+    <th data-sort-ignore="false">Time</th>
+    <th data-sort-ignore="false">MW Device</th>
+    <th data-sort-ignore="false">Event Type</th>
+    <th data-sort-ignore="false">Event Details</th>
+   </tr>
+  </thead>
+  <tbody>
+   <tr ng-repeat="tweet in collection track by $index" node-table>
+
+    <td>{{$index+1}}</td>
+      <td>{{tweet.time}}</td>
+      <td>{{tweet.nodeName}}</td>
+      <td>{{tweet.notifType}}</td>
+      <td>{{tweet.msgStr}}</td>
+    </td>
+
+   </tr>
+  </tbody>
+  <tfoot class="hide-if-no-paging">
+   <tr>
+    <td colspan="4">
+     <div class="pagination pagination-centered"></div>
+    </td>
+   </tr>
+  </tfoot>
+ </table>
+
+ <hr />
+ <p>
+  <span>Build: @buildtime@</span>
+ </p>

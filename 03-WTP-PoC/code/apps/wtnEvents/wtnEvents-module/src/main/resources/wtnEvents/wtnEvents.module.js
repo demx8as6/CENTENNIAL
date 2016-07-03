@@ -1,15 +1,18 @@
 /*
- * Copyright (c) 2015 Cisco Systems, Inc. and others.  All rights reserved.
+ * Copyright (c) 2016 Tech Mahindra Ltd. and others. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 which accompanies this distribution,
  * and is available at http://www.eclipse.org/legal/epl-v10.html
  */
 
-define(['angularAMD', 'app/routingConfig', 'app/core/core.services', 'common/config/env.module'], function(ng) {
-  var wtnEventsApp = angular.module('app.wtnEvents', ['app.core', 'ui.router.state','config']);
+define([ 'angularAMD', 'app/routingConfig', 'app/core/core.services',
+    'common/config/env.module' ], function(ng) {
+  var wtnEventsApp = angular.module('app.wtnEvents', [ 'app.core',
+      'ui.router.state', 'config' ]);
 
-  wtnEventsApp.config(function($stateProvider, $compileProvider, $controllerProvider, $provide, NavHelperProvider, $translateProvider) {
+  wtnEventsApp.config(function($stateProvider, $compileProvider,
+      $controllerProvider, $provide, NavHelperProvider, $translateProvider) {
     wtnEventsApp.register = {
       controller : $controllerProvider.register,
       directive : $compileProvider.directive,
@@ -18,30 +21,29 @@ define(['angularAMD', 'app/routingConfig', 'app/core/core.services', 'common/con
 
     };
 
-
     NavHelperProvider.addControllerUrl('app/wtnEvents/wtnEvents.controller');
     NavHelperProvider.addToMenu('wtnEvents', {
-     "link" : "#/wtnEvents",
-     "active" : "main.wtnEvents",
-     "title" : "wtnEvents",
-     "icon" : "",  // Add navigation icon css class here
-     "page" : {
-        "title" : "wtnEvents",
-        "description" : "wtnEvents"
-     }
+      "link" : "#/wtnEvents",
+      "active" : "main.wtnEvents",
+      "title" : "Events",
+      "icon" : "icon-comments", // Add navigation icon css class here
+      "page" : {
+        "title" : "Events",
+        "description" : "Events"
+      }
     });
 
     var access = routingConfig.accessLevels;
 
     $stateProvider.state('main.wtnEvents', {
-        url: 'wtnEvents',
-        access: access.admin,
-        views : {
-            'content' : {
-                templateUrl: 'src/app/wtnEvents/wtnEvents.tpl.html',
-                controller: 'wtnEventsCtrl'
-            }
+      url : 'wtnEvents',
+      access : access.admin,
+      views : {
+        'content' : {
+          templateUrl : 'src/app/wtnEvents/wtnEvents.tpl.html',
+          controller : 'wtnEventsCtrl'
         }
+      }
     });
 
   });

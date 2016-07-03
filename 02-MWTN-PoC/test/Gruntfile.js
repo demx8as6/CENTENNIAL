@@ -146,7 +146,7 @@ module.exports = function(grunt) {
     //    'shell:controller-odl-build',
         'shell:controller-wipro-build',
    //     'shell:mediator-hcl-build',
-        'shell:mediator-ceragon-build'
+    //    'shell:mediator-ceragon-build'
     ]);
     grunt.registerTask('test-env', [
     //  'shell:controller-odl',
