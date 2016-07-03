@@ -29,6 +29,9 @@
     <module>wtnTopology</module>
 		<!--  <module>features</module>  -->
     <module>wtnCompare</module>
+    <module>wtnConfig</module>
+    <module>wtnEvents</module>
+    <module>odlChat</module>
   </modules>
 
 	<build>

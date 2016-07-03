@@ -2,17 +2,17 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
  <modelVersion>4.0.0</modelVersion>
-
+ 
  <parent>
-  <groupId>com.highstreet.technologies.odl.dlux</groupId>
   <artifactId>wtn</artifactId>
+  <groupId>com.highstreet.technologies.odl.dlux</groupId>
   <version>0.3.0-SNAPSHOT</version>
   <relativePath>..</relativePath>
  </parent>
 
  <packaging>pom</packaging>
  <groupId>com.highstreet.technologies.odl.dlux</groupId>
- <artifactId>wtnTopology</artifactId>
+ <artifactId>wtnConfig</artifactId>
  <version>0.3.0-SNAPSHOT</version>
  <name>${prefix} ${project.artifactId}</name>
 
@@ -28,7 +28,7 @@
 
 
  <modules>
-  <module>wtnTopology-module</module>
-  <module>wtnTopology-bundle</module>
+  <module>wtnConfig-module</module>
+  <module>wtnConfig-bundle</module>
  </modules>
 </project>
