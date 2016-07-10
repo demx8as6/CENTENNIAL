@@ -24,7 +24,7 @@ module MicrowaveModel-TypeDefinitions {
         'This module contains a collection of YANG definitions for 
          managing microwave transport networks.';
 
-    revision 2016-07-03 {
+    revision 2016-07-09 {
         description 
             "Initial revision."; 
         reference 
@@ -254,11 +254,9 @@ module MicrowaveModel-TypeDefinitions {
             Combinations of structureID and timeSlotID must be unique inside the device to assure that every resource is used just once.";
         leaf structureId {
             type string;
-            default "structure to be chosen";
         }
         leaf timeSlotId {
             type int32;
-            default -1;
         }
     }
     grouping timeSlotStatusType {
