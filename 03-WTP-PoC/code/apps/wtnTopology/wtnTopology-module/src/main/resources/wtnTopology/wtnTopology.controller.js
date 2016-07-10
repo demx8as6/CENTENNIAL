@@ -6,15 +6,17 @@
  * and is available at http://www.eclipse.org/legal/epl-v10.html
  */
 
-define(['app/wtnTopology/wtnTopology.module','app/wtnTopology/wtnTopology.services'], function(wtnTopologyApp) {
+define(['app/wtnTopology/wtnTopology.module', 'app/wtnTopology/wtnTopology.services', 'app/wtnCommons/wtnCommons.services'], function(wtnTopologyApp) {
 
-  wtnTopologyApp.register.controller('wtnTopologyCtrl', ['$scope', '$rootScope', 'wtnTopologySvc', function($scope, $rootScope, wtnTopologySvc) {
+  wtnTopologyApp.register.controller('wtnTopologyCtrl', ['$scope', '$rootScope', 'wtnTopologySvc', '$wtnCommons', function($scope, $rootScope, wtnTopologySvc, $wtnCommons) {
 
     $rootScope['section_logo'] = ''; // Add your topbar logo location here such as 'assets/images/logo_topology.gif'
 
     $scope.wtnTopologyInfo = {};
 
-    $scope.data = "wtnTopology";
+    $wtnCommons.getData(function(data){
+      $scope.data = data;      
+    });
 
   }]);
 

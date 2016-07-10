@@ -7,7 +7,7 @@
  */
 
 define(
-    [ 'app/wtnEvents/wtnEvents.module', 'app/wtnEvents/wtnEvents.services' ],
+    [ 'app/wtnEvents/wtnEvents.module', 'app/wtnEvents/wtnEvents.services', 'app/wtnCommons/wtnCommons.services'],
     function(wtnEventsApp) {
 
       wtnEventsApp.register
@@ -17,7 +17,8 @@ define(
                   '$scope',
                   '$rootScope',
                   '$wtnEvents',
-                  function($scope, $rootScope, $wtnEvents) {
+                  '$wtnCommons',
+                  function($scope, $rootScope, $wtnEvents, $wtnCommons) {
 
                     $rootScope['section_logo'] = 'src/app/wtnEvents/wtnEvents.png';
 
@@ -70,7 +71,7 @@ define(
                           console.log("Socket connection closed.");
                         }
                       } catch (e) {
-                        alert("Error when creating WebSocket" + e);
+                        $scope.error("Error when creating WebSocket.\n" + e);
                       }
                     };
 

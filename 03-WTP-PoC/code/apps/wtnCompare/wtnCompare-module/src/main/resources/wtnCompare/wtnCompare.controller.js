@@ -6,15 +6,17 @@
  * and is available at http://www.eclipse.org/legal/epl-v10.html
  */
 
-define(['app/wtnCompare/wtnCompare.module','app/wtnCompare/wtnCompare.services'], function(wtnCompareApp) {
+define(['app/wtnCompare/wtnCompare.module','app/wtnCompare/wtnCompare.services','app/wtnCommons/wtnCommons.services'], function(wtnCompareApp) {
 
-  wtnCompareApp.register.controller('wtnCompareCtrl', ['$scope', '$rootScope', 'wtnCompareSvc', function($scope, $rootScope, wtnCompareSvc) {
+  wtnCompareApp.register.controller('wtnCompareCtrl', ['$scope', '$rootScope', 'wtnCompareSvc', '$wtnCommons', function($scope, $rootScope, wtnCompareSvc, $wtnCommons) {
 
     $rootScope['section_logo'] = ''; // Add your topbar logo location here such as 'assets/images/logo_topology.gif'
 
     $scope.wtnCompareInfo = {};
 
-    $scope.data = "wtnCompare";
+    $wtnCommons.getData(function(data){
+      $scope.data = data;      
+    });
 
   }]);
 

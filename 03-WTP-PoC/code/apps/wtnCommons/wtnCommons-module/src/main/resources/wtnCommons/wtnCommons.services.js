@@ -9,16 +9,16 @@
 define(['app/wtnCommons/wtnCommons.module'],function(wtnCommonsApp) {
 
 
-  wtnCommonsApp.register.factory('wtnCommonsSvc', function($http, ENV) {
-    var svc = {
+  wtnCommonsApp.register.factory('$wtnCommons', function($http, ENV) {
+    var service = {
       base: ENV.getBaseURL("MD_SAL") + "/restconf/"
     };
+    
+    service.getData = function(callback) {
+      return callback('Hallo World! I\'m here');
+    }
 
-    /*
-     * You can define all of your REST API interactions here.
-     */
-
-    return svc;
+    return service;
   });
 
 });

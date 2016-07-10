@@ -15,34 +15,33 @@ define(['angularAMD', 'app/routingConfig', 'app/core/core.services', 'common/con
       directive : $compileProvider.directive,
       factory : $provide.factory,
       service : $provide.service
-
     };
 
 
-    NavHelperProvider.addControllerUrl('app/wtnCommons/wtnCommons.controller');
-    NavHelperProvider.addToMenu('wtnCommons', {
-     "link" : "#/wtnCommons",
-     "active" : "main.wtnCommons",
-     "title" : "wtnCommons",
-     "icon" : "",  // Add navigation icon css class here
-     "page" : {
-        "title" : "wtnCommons",
-        "description" : "wtnCommons"
-     }
-    });
+//    NavHelperProvider.addControllerUrl('app/wtnCommons/wtnCommons.controller');
+//    NavHelperProvider.addToMenu('wtnCommons', {
+//     "link" : "#/wtnCommons",
+//     "active" : "main.wtnCommons",
+//     "title" : "wtnCommons",
+//     "icon" : "",  // Add navigation icon css class here
+//     "page" : {
+//        "title" : "wtnCommons",
+//        "description" : "wtnCommons"
+//     }
+//    });
 
     var access = routingConfig.accessLevels;
 
-    $stateProvider.state('main.wtnCommons', {
-        url: 'wtnCommons',
-        access: access.admin,
-        views : {
-            'content' : {
-                templateUrl: 'src/app/wtnCommons/wtnCommons.tpl.html',
-                controller: 'wtnCommonsCtrl'
-            }
-        }
-    });
+//    $stateProvider.state('main.wtnCommons', {
+//        url: 'wtnCommons',
+//        access: access.admin,
+//        views : {
+//            'content' : {
+//                templateUrl: 'src/app/wtnCommons/wtnCommons.tpl.html',
+//                controller: 'wtnCommonsCtrl'
+//            }
+//        }
+//    });
 
   });
 

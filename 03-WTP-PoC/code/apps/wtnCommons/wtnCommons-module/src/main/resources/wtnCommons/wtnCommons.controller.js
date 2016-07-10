@@ -8,13 +8,15 @@
 
 define(['app/wtnCommons/wtnCommons.module','app/wtnCommons/wtnCommons.services'], function(wtnCommonsApp) {
 
-  wtnCommonsApp.register.controller('wtnCommonsCtrl', ['$scope', '$rootScope', 'wtnCommonsSvc', function($scope, $rootScope, wtnCommonsSvc) {
+  wtnCommonsApp.register.controller('wtnCommonsCtrl', ['$scope', '$rootScope', '$wtnCommons', function($scope, $rootScope, $wtnCommons) {
 
     $rootScope['section_logo'] = ''; // Add your topbar logo location here such as 'assets/images/logo_topology.gif'
 
     $scope.wtnCommonsInfo = {};
 
-    $scope.data = "wtnCommons";
+    $wtnCommons.getData(function(data){
+      $scope.data = data;      
+    });
 
   }]);
 
