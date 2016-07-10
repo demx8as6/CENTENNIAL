@@ -544,7 +544,7 @@ function parseOpenModelatt(xmi){
             }
         }
         if(i==openModelAtt.length){
-          if (unit !== undefined) console.info('sko66', id, unit);
+            // if (unit !== undefined) console.info('sko66', id, unit);
             var att=new OpenModelObject(id,"attribute",vr,cond,sup,inv,avcNot,undefined,undefined,passBR,undefined,undefined,undefined,key, unit);
             openModelAtt.push(att);
         }
@@ -674,7 +674,9 @@ function createElement(xmi){
             var obj;
             xmi[key].array?len=xmi[key].array.length:len=1;
             for (var i = 0; i < len; i++) {
+              
                 len==1?obj=ele:obj=ele.array[i];
+                
                 if (obj.attributes()["xmi:type"] == "uml:Package"||obj.attributes()["xmi:type"]=="uml:Interface") {
                     var name;
                     obj.attributes().name?name=obj.attributes().name:console.error("ERROR:The attribute 'name' of tag 'xmi:id="+obj.attributes()["xmi:id"]+"' in this file is empty!");
@@ -693,7 +695,7 @@ function createElement(xmi){
                     if (xmi["ownedComment"]) {
                         var len;
                         var comment = "";
-                        xmi["ownedComment"].array ? len = xmi["ownedComment"].array.length : len = 1;
+// [sko] why??                        xmi["ownedComment"].array ? len = xmi["ownedComment"].array.length : len = 1;
                         if(xmi['ownedComment'].array){
                             comment="";
                             comment+=xmi['ownedComment'].array[0].body.text();
@@ -716,6 +718,7 @@ function createElement(xmi){
                 else {
                     var a=obj.attributes()["xmi:type"];
                     //parse xmi:type
+                    
                     switch(a){
                         case "uml:Enumeration":createClass(obj,"enumeration");
                             break;
@@ -723,7 +726,7 @@ function createElement(xmi){
                             break;
                         case "uml:PrimitiveType":createClass(obj,"typedef");
                             break;
-                        case "uml:Class":createClass(obj,"grouping");
+                        case "uml:Class":createClass(obj,"grouping"); 
                             break;
                         case "uml:Operation":createClass(obj,"rpc");
                             break;
@@ -743,6 +746,7 @@ function createElement(xmi){
 }
 
 function createClass(obj,nodeType) {
+
     try {
         var name;
         obj.attributes().name?name=obj.attributes().name:console.error("ERROR:The attribute 'name' of tag 'xmi:id="+obj.attributes()["xmi:id"]+"' in this file is empty!");
@@ -1115,7 +1119,7 @@ function obj2yang(ele){
                             // ele[i].attribute[j].support=feat[feat.length-1].name;
                         }
                         if(openModelAtt[k].unit){
-                          console.info('unit from profile', openModelAtt[k].unit, ele[i].attribute[j].name, JSON.stringify(openModelAtt[k]));
+                          // console.info('[sko] unit from profile', openModelAtt[k].unit, ele[i].attribute[j].name, JSON.stringify(openModelAtt[k]));
                           ele[i].attribute[j].units=openModelAtt[k].unit;
                         }
                         if(openModelAtt[k].status){
