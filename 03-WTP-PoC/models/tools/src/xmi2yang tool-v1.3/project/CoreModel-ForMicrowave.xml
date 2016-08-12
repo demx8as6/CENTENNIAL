@@ -940,7 +940,7 @@
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_9PLgQLEtEeSZUdYfPSdgew" value="1"/>
               <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_9PmXALEtEeSZUdYfPSdgew" value="1"/>
             </ownedAttribute>
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_AjGvILEuEeSZUdYfPSdgew" name="adminsatratveState" visibility="public" type="_KSKOYLEuEeSZUdYfPSdgew" isReadOnly="true">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_AjGvILEuEeSZUdYfPSdgew" name="administrativeState" visibility="public" type="_KSKOYLEuEeSZUdYfPSdgew" isReadOnly="true">
               <ownedComment xmi:type="uml:Comment" xmi:id="_58sKsGgaEeWmgIwAIZlYKQ" annotatedElement="_AjGvILEuEeSZUdYfPSdgew">
                 <body xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions">Shows whether or not the client has permission to use or has a prohibition against using the resource.The administrative state expresses usage permissions for specific resources without modification to the provisioning of those resources.</body>
               </ownedComment>

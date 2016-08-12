@@ -32,6 +32,7 @@
        - add Q.822 to  CoreModel::CoreNetworkModule::TypeDefinitions
        - add attribute uuid to CoreModel::CoreFoundationModule::SuperClassesAndCommonPackages::ObjectClasses::LocalClass used at yang key
        - add yang key definitions
+       - correct CoreModel::CoreFoundationModel::StateModel::ObjectClasses::State_Pac::adminsatratveState -> administrativeState
        - rename CoreModel to CoreModelForMicrowave
 -->
 <xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmlns:OpenModel_Profile="http:///schemas/OpenModel_Profile/_0tU-YNyQEeW6C_FaABjU5w/14">
@@ -43,7 +44,7 @@
 	<xsl:key name="keyRef" match="key" use="@base_StructuralFeature"/>
 	<xsl:variable name="keyLookupDoc" select="document('keys.xml')"/>
 	<xsl:variable name="thisLookupDoc" select="document('../../input/CoreModel.uml')"/>
-	<!-- tempates -->
+	<!-- templates -->
 	<xsl:template match="packagedElement[@xmi:type='uml:Package' and @name = 'ExplanatoryFiguresUsedIndDocumentsAndSlides' ]"/>
 	<xsl:template match="packagedElement[@xmi:type='uml:Package' and @name = 'CoreModelEnhancements' ]"/>
 	<xsl:template match="packagedElement[@xmi:type='uml:Package' and @name = 'TopologyPacs' ]"/>
@@ -121,11 +122,20 @@
 			</xsl:for-each>
 		</xsl:copy>
 	</xsl:template>
-	<!-- 
+  <!-- 
+    correct CoreModel::CoreFoundationModel::StateModel::ObjectClasses::State_Pac::adminsatratveState -> administrativeState -->
+  <xsl:template match="ownedAttribute[@name = 'adminsatratveState' ]">
+    <xsl:copy>
+      <xsl:apply-templates select="@*"/>
+      <xsl:attribute name="name">administrativeState</xsl:attribute>
+      <xsl:apply-templates select="* | text()"/>
+    </xsl:copy>
+  </xsl:template>
+  <!-- 
     rename CoreModel to CoreModelForMicrowave 
-	<xsl:template match="@name[. = 'CoreModel']">
-		<xsl:attribute name="name">CoreModelForMicrowave</xsl:attribute>
-	</xsl:template> -->
+  <xsl:template match="@name[. = 'CoreModel']">
+    <xsl:attribute name="name">CoreModelForMicrowave</xsl:attribute>
+  </xsl:template> -->
 	<!-- 
     check for wrong charset  -->
 	<xsl:template match="body">
